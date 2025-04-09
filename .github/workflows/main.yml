@@ -1,8 +1,13 @@
-name: GitHub Actions Demo 
-run-name: Testing out GitHub Actions
-on: [push] 
+name: GitHub Actions Demo        # Name displayed on the GitHub Actions tab.
+
+run-name: Testing out GitHub Actions   # Name shown each time the workflow runs.
+
+on: [push]                       # Trigger event: the workflow activates on any push to the repository.
+
 jobs:
- Basic-Workflow: 
- runs-on: ubuntu-latest 
- steps: 
- - run: echo " Job is executing as part of Basic workflow"
+  Basic-Workflow:                # Job identifier (any descriptive name)
+    runs-on: ubuntu-latest       # Specifies the virtual environment OS (Ubuntu latest version)
+
+    steps:                       # Steps are the tasks executed sequentially within the job.
+      - run: echo " Job is executing as part of Basic workflow" 
+                                 # A simple command executed in the workflow.
